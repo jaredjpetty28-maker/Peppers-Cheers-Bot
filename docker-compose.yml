@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  king-pepper-bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./src/audio/cheers:/app/src/audio/cheers
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

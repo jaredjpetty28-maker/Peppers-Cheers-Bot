@@ -1,0 +1,15 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  env: {
+    node: true,
+    es2022: true
+  },
+  ignorePatterns: ['dist'],
+  rules: {
+    '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
+    '@typescript-eslint/no-floating-promises': 'error'
+  }
+};
