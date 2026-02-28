@@ -1,0 +1,13 @@
+﻿version: "3.9"
+services:
+  king-pepper-cheers:
+    build: .
+    container_name: king-pepper-cheers
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./audio:/app/audio
+      - ./data:/app/data
+    ports:
+      - "3000:3000"
